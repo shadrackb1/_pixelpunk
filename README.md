@@ -1,10 +1,8 @@
-﻿# pixelpunk
+# pixelpunk archive
 
-pixelpunk | Curated Vintage Archives
+<img src="./assets/header.svg" width="100%" alt="pixelpunk archive" />
 
-## Stack
-
-react Â· vite Â· typescript
+Curated vintage and design archives.
 
 ## Run locally
 
@@ -13,4 +11,4 @@ react Â· vite Â· typescript
 
 ## License
 
-Private / all rights reserved.
+All rights reserved.
