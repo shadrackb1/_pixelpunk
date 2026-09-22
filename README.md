@@ -1,8 +1,12 @@
-# pixelpunk archive
+# _pixelpunk
 
-<img src="./assets/header.svg" width="100%" alt="pixelpunk archive" />
+Curated design archives.
 
-Curated vintage and design archives.
+**Status:** prototype
+
+## Stack
+
+React, TypeScript, Vite, Firebase
 
 ## Run locally
 
