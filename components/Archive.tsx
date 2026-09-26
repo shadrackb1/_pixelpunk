@@ -8,7 +8,7 @@ const Archive: React.FC = () => {
       <div className="container mx-auto px-6 mb-20">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
           <div className="space-y-4 max-w-xl">
-            <span className="text-primary font-serif italic text-lg block">Research & Styling</span>
+            <span className="text-primary font-serif text-lg block">Notes & Styling</span>
             <h2 className="text-5xl md:text-7xl font-serif font-medium tracking-tight">The Records</h2>
             <p className="text-zinc-500 text-lg font-medium leading-relaxed">
               A record of our past collections and styling stories. 

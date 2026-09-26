@@ -30,7 +30,7 @@ const Vault: React.FC<VaultProps> = ({ onAddToCart, onViewProduct }) => {
               viewport={{ once: true }}
               className="text-primary font-serif italic text-xl block"
             >
-              Curated Selection
+              Available Now
             </motion.span>
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
@@ -102,8 +102,8 @@ const Vault: React.FC<VaultProps> = ({ onAddToCart, onViewProduct }) => {
                             animate={{ opacity: 1, x: 0 }}
                             className="absolute top-8 right-8"
                           >
-                            <div className="bg-red-500/90 backdrop-blur-md text-white px-5 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-2xl animate-pulse">
-                              1 Unit Remaining
+                            <div className="bg-red-500/90 backdrop-blur-md text-white px-5 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-2xl">
+                              One of One
                             </div>
                           </motion.div>
                         )}
@@ -114,7 +114,7 @@ const Vault: React.FC<VaultProps> = ({ onAddToCart, onViewProduct }) => {
                           View Provenance
                         </span>
                       </div>
-                      <div className="absolute top-8 left-8">
+                      <div className="absolute bottom-8 left-8">
                         <div className="bg-zinc-950/80 backdrop-blur-md px-5 py-2.5 rounded-2xl border border-white/10 shadow-xl">
                           <span className="text-[11px] font-bold text-zinc-300 uppercase tracking-widest font-mono">{product.era}</span>
                         </div>
@@ -160,7 +160,7 @@ const Vault: React.FC<VaultProps> = ({ onAddToCart, onViewProduct }) => {
                           onClick={() => onViewProduct(product)}
                           className="group/btn text-[10px] font-bold text-zinc-300 uppercase tracking-[0.2em] flex items-center gap-3 transition-colors hover:text-primary"
                         >
-                          Discover Full Story 
+                          View Full Story
                           <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
                         </button>
                       </div>
@@ -175,7 +175,7 @@ const Vault: React.FC<VaultProps> = ({ onAddToCart, onViewProduct }) => {
                               : 'bg-zinc-800 text-zinc-600 cursor-not-allowed opacity-50'
                           }`}
                         >
-                          {product.status === ItemStatus.AVAILABLE ? 'Secure for Archive' : 'Unavailable'}
+                          {product.status === ItemStatus.AVAILABLE ? 'Add to Bag' : 'Unavailable'}
                         </button>
                       </div>
                     </div>

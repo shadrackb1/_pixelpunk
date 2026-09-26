@@ -13,7 +13,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenPolicy }) => {
           <div className="col-span-1 md:col-span-2 space-y-10">
             <h3 className="text-4xl font-serif font-medium tracking-tight">pixelpunk</h3>
             <p className="text-zinc-500 max-w-sm font-medium leading-relaxed text-lg">
-              Don't just wear clothes. Own a piece of the story. Curated high-quality archives for those who appreciate history and superior modern silhouettes.
+              Vintage pieces with real history, checked by hand and cut for how people dress now. Built for collectors who care about fabric, fit, and where a garment has been.
             </p>
             <div className="flex gap-10">
               <a href="#" className="text-xs font-bold text-zinc-500 hover:text-white transition-colors uppercase tracking-[0.3em]">Instagram</a>
@@ -44,14 +44,14 @@ const Footer: React.FC<FooterProps> = ({ onOpenPolicy }) => {
           <div className="space-y-8">
             <h5 className="text-[11px] font-bold text-zinc-400 uppercase tracking-[0.4em]">Current Status</h5>
             <div className="p-6 rounded-2xl bg-zinc-900 border border-white/5 text-center space-y-2">
-              <div className="text-3xl font-serif italic text-primary animate-pulse">Active</div>
-              <p className="text-[10px] font-bold text-zinc-600 uppercase tracking-[0.2em]">Global Network Online</p>
+              <div className="text-3xl font-serif text-primary font-medium">Open</div>
+              <p className="text-[10px] font-bold text-zinc-600 uppercase tracking-[0.2em]">Taking find requests</p>
             </div>
           </div>
         </div>
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <p className="text-[10px] text-zinc-600 font-bold uppercase tracking-[0.4em]">© 2024 PixelPunk Archive Collections</p>
+          <p className="text-[10px] text-zinc-600 font-bold uppercase tracking-[0.4em]">© 2026 PixelPunk Archive Collections</p>
           <div className="flex gap-10">
             <button onClick={() => onOpenPolicy('Privacy Protocol', 'privacy')} className="text-[10px] text-zinc-600 hover:text-zinc-400 transition-colors font-bold uppercase tracking-[0.4em]">Privacy</button>
             <button onClick={() => onOpenPolicy('Terms of Ownership', 'terms')} className="text-[10px] text-zinc-600 hover:text-zinc-400 transition-colors font-bold uppercase tracking-[0.4em]">Terms</button>

@@ -29,21 +29,21 @@ interface CMSContextType {
 
 const DEFAULT_CONTENT: SiteContent = {
   hero: {
-    slogan: "CURATING THE FUTURE ARCHIVE",
+    slogan: "ARCHIVE · EST. FOR KEEPERS",
     title: "Rare Archives. Modern Fits.",
-    subtitle: "Stop wearing the same things as everyone else. We find unique, high-quality pieces from the past that look incredible in your closet today."
+    subtitle: "We find one-of-one pieces from past decades, check them properly, and put them back into daily wear. No restocks. No copies."
   },
   marquee: [
-    "LIMITED: Each item is a singular record of history.",
-    "JOIN THE ARCHIVE: Ownership grants access to private drops.",
-    "URGENCY: Sold items are removed permanently from the public log."
+    "ONE OF ONE: Each piece leaves the vault once.",
+    "NEW DROPS: Fresh finds land most Fridays.",
+    "AFTER SALE: Sold pieces leave the public log."
   ],
   fomoMessages: [
-    "A collector in Paris just viewed the Hybrid Blazer.",
-    "Only 1 Archive Tee left in current stock.",
-    "A styling request was just fulfilled for a client in Tokyo.",
-    "New curated drops arriving this Friday.",
-    "Verified: 98.4% of archive items never return after sale."
+    "The Hybrid Blazer is getting attention today.",
+    "One Archive Tee left in the current drop.",
+    "A find request just closed for a client in Tokyo.",
+    "New pieces land this Friday.",
+    "Most sold pieces never return to the vault."
   ],
   products: PRODUCTS,
   archiveItems: ARCHIVE_ITEMS

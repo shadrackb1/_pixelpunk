@@ -18,7 +18,7 @@ const Sourcing: React.FC = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div className="space-y-12">
             <div className="space-y-6">
-              <span className="text-primary font-serif italic text-lg block">Personalized Archive Search</span>
+              <span className="text-primary font-serif text-lg block">Find a Specific Piece</span>
               <h2 className="text-5xl md:text-7xl font-serif font-medium tracking-tight leading-[1]">Found for you, <br />individually.</h2>
               <p className="text-xl text-zinc-400 font-medium max-w-md leading-relaxed">
                 If you have a specific item in mind, our global network can track it down. 

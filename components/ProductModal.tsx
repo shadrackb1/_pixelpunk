@@ -58,7 +58,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, onAddToCa
           <div className="p-10 lg:p-16 overflow-y-auto hide-scrollbar flex-1">
             <div className="flex justify-between items-start mb-10">
               <div className="space-y-4">
-                <span className="text-primary font-serif italic text-2xl drop-shadow-sm">{product.category} Archive</span>
+                <span className="text-primary font-serif text-2xl drop-shadow-sm">{product.category}</span>
                 <h2 className="text-5xl lg:text-6xl font-serif font-medium leading-[0.9] text-white max-w-md">{product.name}</h2>
               </div>
               <button 
@@ -83,7 +83,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, onAddToCa
                     "{product.provenance}"
                   </p>
                   <p className="text-zinc-500 text-sm font-medium leading-relaxed">
-                    This piece was recovered during an archive sweep in Berlin, identified by its unique structural ribbing and experimental late-century finish.
+                    {product.provenance}
                   </p>
                 </div>
 
@@ -119,17 +119,17 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, onAddToCa
               onClick={() => { onAddToCart(product); onClose(); }}
               className="w-full btn-vintage py-7 rounded-full text-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] active:scale-[0.98] transition-all font-bold tracking-[0.2em] uppercase"
             >
-              Secure Unique Ownership
+              Add to Bag
             </button>
             <div className="flex flex-col items-center gap-3 mt-6">
               <div className="flex items-center gap-3">
                  <span className="w-1.5 h-1.5 bg-success rounded-full animate-pulse"></span>
                  <p className="text-[10px] text-zinc-500 font-bold uppercase tracking-[0.4em]">
-                   Global Log: Currently Available
+                   Status: Available
                  </p>
               </div>
-              <p className="text-[10px] text-zinc-600 font-medium italic text-center max-w-xs">
-                Acquiring this artifact secures its removal from the public vault permanently.
+              <p className="text-[10px] text-zinc-600 font-medium text-center max-w-xs">
+                Once this piece sells, it leaves the public vault for good.
               </p>
             </div>
           </div>

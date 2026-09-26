@@ -83,42 +83,42 @@ export const ARCHIVE_ITEMS: ArchiveItem[] = [
 // Re-writing POLICY_CONTENT to use React.createElement to fix syntax errors in a .ts file
 export const POLICY_CONTENT: Record<string, React.ReactNode> = {
   authenticity: React.createElement('div', { className: "space-y-6" },
-    React.createElement('p', null, "PixelPunk operates on a 100% Authenticity Guarantee. Every item entering our archive undergoes a rigorous three-stage verification process:"),
+    React.createElement('p', null, "PixelPunk stands behind every piece we sell. Each item goes through three checks before it reaches the vault:"),
     React.createElement('ul', { className: "list-disc pl-5 space-y-2" },
-      React.createElement('li', null, React.createElement('strong', null, "Structural Audit:"), " Verification of stitch count, seam construction, and hardware hallmarks."),
-      React.createElement('li', null, React.createElement('strong', null, "Historical Cross-Reference:"), " Matching of labels and wash tags against known manufacturing era databases."),
-      React.createElement('li', null, React.createElement('strong', null, "Provenance Logging:"), " Documentation of where the item was sourced and its estimated journey through the years.")
+      React.createElement('li', null, React.createElement('strong', null, "Structural Audit:"), " Stitch count, seam construction, and hardware hallmarks."),
+      React.createElement('li', null, React.createElement('strong', null, "Historical Cross-Reference:"), " Labels and wash tags matched against known manufacturing eras."),
+      React.createElement('li', null, React.createElement('strong', null, "Provenance Logging:"), " Where the item was sourced and how it likely moved over the years.")
     ),
-    React.createElement('p', null, "Items found to be non-original or of inferior manufacturing grade are immediately rejected. Your purchase is a certified historical artifact.")
+    React.createElement('p', null, "Items that fail authenticity or grade checks never go up for sale. What you buy is a real historical piece.")
   ),
   shipping: React.createElement('div', { className: "space-y-6" },
-    React.createElement('p', null, "We treat every archive shipment with the respect a historical item deserves."),
+    React.createElement('p', null, "We pack every archive shipment the way a historical piece deserves."),
     React.createElement('ul', { className: "list-disc pl-5 space-y-2" },
-      React.createElement('li', null, React.createElement('strong', null, "Express Handling:"), " All items are processed within 48 hours."),
-      React.createElement('li', null, React.createElement('strong', null, "Secure Packaging:"), " Items are wrapped in pH-neutral acid-free tissue to prevent any chemical aging during transit."),
-      React.createElement('li', null, React.createElement('strong', null, "Global Tracking:"), " Comprehensive tracking provided for all international destinations via our priority courier network.")
+      React.createElement('li', null, React.createElement('strong', null, "Express Handling:"), " Orders leave within 48 hours."),
+      React.createElement('li', null, React.createElement('strong', null, "Secure Packaging:"), " Items go out in pH-neutral acid-free tissue so nothing chemically ages in transit."),
+      React.createElement('li', null, React.createElement('strong', null, "Global Tracking:"), " Tracking on every international order through our priority courier network.")
     ),
-    React.createElement('p', null, "Delivery typically takes 3-7 business days depending on your location relative to our nearest archive hub.")
+    React.createElement('p', null, "Delivery usually takes 3 to 7 business days, depending on how far you are from the nearest archive hub.")
   ),
   terms: React.createElement('div', { className: "space-y-6" },
     React.createElement('h4', { className: "text-white font-bold" }, "1. Exclusive Ownership"),
     React.createElement('p', null, "Archive items are unique. By completing a checkout, you acknowledge that you are securing a one-of-a-kind piece. Stock is not guaranteed until checkout completion."),
     React.createElement('h4', { className: "text-white font-bold" }, "2. Vintage Condition"),
-    React.createElement('p', null, "You are purchasing \"Pre-Owned\" or \"Archive\" goods. Natural aging, patina, and minor imperfections are part of the item's history. We describe condition accurately, but perfection is never promised—history is messy."),
+    React.createElement('p', null, "You are buying pre-owned or archive goods. Natural aging, patina, and minor marks are part of the item's history. We describe condition honestly, but we never promise perfection. History is messy."),
     React.createElement('h4', { className: "text-white font-bold" }, "3. Returns"),
-    React.createElement('p', null, "Given the unique nature of these items, returns are accepted within 14 days in original, unworn condition with our security tags intact.")
+    React.createElement('p', null, "Because these pieces are one of one, we accept returns within 14 days if the item is unworn and the security tags are still on.")
   ),
   privacy: React.createElement('div', { className: "space-y-6" },
-    React.createElement('p', null, "Your privacy is as protected as our archives. We do not sell your data."),
-    React.createElement('p', null, "We collect only the information necessary to fulfill your request and secure your shipping. This includes email, name, and delivery coordinates. All transactions are encrypted with 256-bit bank-grade security protocols."),
+    React.createElement('p', null, "Your privacy matters as much as the archive. We do not sell your data."),
+    React.createElement('p', null, "We collect only what we need to fulfill your order and ship it: email, name, and delivery address. Transactions run over encrypted connections."),
     React.createElement('p', null, "Your history with us stays with us.")
   ),
   care: React.createElement('div', { className: "space-y-6" },
-    React.createElement('p', null, "Vintage fabrics require a \"Low-Impact\" philosophy. We recommend:"),
+    React.createElement('p', null, "Vintage fabrics do better with a light touch. We recommend:"),
     React.createElement('ul', { className: "list-disc pl-5 space-y-2" },
       React.createElement('li', null, React.createElement('strong', null, "Hand Wash Only:"), " Avoid heavy mechanical agitation."),
       React.createElement('li', null, React.createElement('strong', null, "Steam Over Iron:"), " High heat from an iron can flatten historical textures. Use gentle steam."),
-      React.createElement('li', null, React.createElement('strong', null, "Breathable Storage:"), " Never store archive items in plastic bags for long periods. Use cotton garment bags.")
+      React.createElement('li', null, React.createElement('strong', null, "Breathable Storage:"), " Skip long-term plastic bags. Use cotton garment bags.")
     )
   )
 };

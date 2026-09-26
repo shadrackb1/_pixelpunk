@@ -52,7 +52,7 @@ const AdminPanel: React.FC = () => {
   const tabs = [
     { id: 'hero', name: 'Identity & Hero', icon: '✨' },
     { id: 'inventory', name: 'Archive Inventory', icon: '📦' },
-    { id: 'social', name: 'Psychology & FOMO', icon: '🧠' },
+    { id: 'social', name: 'Notices & Drops', icon: '🧠' },
   ];
 
   if (!isOpen) {
@@ -72,7 +72,7 @@ const AdminPanel: React.FC = () => {
       <div className="fixed inset-0 z-[6000] bg-darker/95 backdrop-blur-xl flex items-center justify-center p-6">
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="w-full max-w-md vintage-card p-12 rounded-[2.5rem] text-center space-y-8">
           <div className="text-5xl">🔐</div>
-          <h2 className="text-3xl font-serif italic text-white">Administrator Access</h2>
+          <h2 className="text-3xl font-serif text-white">Administrator Access</h2>
           <form onSubmit={handleLogin} className="space-y-6">
             <input 
               type="password" 
@@ -106,7 +106,7 @@ const AdminPanel: React.FC = () => {
       {/* Sidebar */}
       <div className="w-full lg:w-80 bg-zinc-950 border-r border-white/5 p-8 flex flex-col gap-12 overflow-y-auto">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-serif italic text-primary">Command</h1>
+          <h1 className="text-2xl font-serif text-primary">Command</h1>
           <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-white/5 rounded-full">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
@@ -280,7 +280,7 @@ const AdminPanel: React.FC = () => {
 
               <div className="space-y-10">
                 <div className="space-y-4">
-                  <h4 className="text-xs font-bold text-primary uppercase tracking-[0.3em]">FOMO Notification Pool</h4>
+                  <h4 className="text-xs font-bold text-primary uppercase tracking-[0.3em]">Drop Notices</h4>
                   <div className="space-y-4">
                     {content.fomoMessages.map((msg, idx) => (
                       <div key={idx} className="flex gap-4">

@@ -34,7 +34,7 @@ const Process: React.FC = () => {
     <section id="process" className="py-24 sm:py-32 bg-dark">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-24 space-y-6">
-          <span className="text-primary font-serif italic text-lg block">Our Philosophy</span>
+          <span className="text-primary font-serif text-lg block">How We Work</span>
           <h2 className="text-5xl md:text-7xl font-serif font-medium tracking-tight">How we Recover History</h2>
           <p className="text-zinc-500 font-medium text-lg md:text-xl leading-relaxed">
             We handle everything from the initial search to the final delivery, 

@@ -35,7 +35,7 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ cart, onClose, onRemove }) =>
              </div>
              <div>
                <h3 className="text-2xl font-extrabold tracking-tight">Your Bag</h3>
-               <p className="text-xs text-slate-500 font-bold uppercase tracking-widest">{cart.length} Items Added</p>
+               <p className="text-xs text-zinc-500 font-bold uppercase tracking-widest">{cart.length === 1 ? '1 Item' : `${cart.length} Items`}</p>
              </div>
           </div>
           <button onClick={onClose} className="p-3 hover:bg-white/5 rounded-2xl transition-all">
@@ -47,7 +47,7 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ cart, onClose, onRemove }) =>
           {cart.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center space-y-8">
               <div className="text-7xl opacity-20">🎒</div>
-              <p className="text-slate-400 font-bold uppercase tracking-widest text-sm">Your bag is empty right now</p>
+              <p className="text-zinc-400 font-bold uppercase tracking-widest text-sm">Your bag is empty right now</p>
               <button onClick={onClose} className="text-primary text-sm font-bold uppercase tracking-widest border-b-2 border-primary pb-1">Start Exploring</button>
             </div>
           ) : (
@@ -65,7 +65,7 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ cart, onClose, onRemove }) =>
                 <div className="flex-1 flex flex-col justify-between py-1">
                   <div>
                     <h4 className="font-bold text-base tracking-tight group-hover:text-primary transition-all line-clamp-1">{item.name}</h4>
-                    <p className="text-xs text-slate-500 font-bold mt-1 uppercase tracking-widest">{item.category}</p>
+                    <p className="text-xs text-zinc-500 font-bold mt-1 uppercase tracking-widest">{item.category}</p>
                   </div>
                   <div className="flex justify-between items-end">
                     <span className="text-xl font-extrabold">{item.price}</span>
@@ -85,7 +85,7 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ cart, onClose, onRemove }) =>
         {cart.length > 0 && (
           <div className="p-8 bg-darker border-t border-white/10 space-y-6">
             <div className="space-y-4">
-              <div className="flex justify-between text-xs font-bold text-slate-400 uppercase tracking-widest">
+              <div className="flex justify-between text-xs font-bold text-zinc-400 uppercase tracking-widest">
                 <span>Shipping</span>
                 <span className="text-success">FREE</span>
               </div>
@@ -94,11 +94,11 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ cart, onClose, onRemove }) =>
                 <span className="text-primary">${subtotal.toFixed(2)}</span>
               </div>
             </div>
-            <button className="w-full btn-primary py-6 rounded-3xl font-bold text-lg shadow-xl shadow-primary/20 active:scale-95 transition-all">
+            <button className="w-full btn-vintage py-6 rounded-full font-bold text-lg shadow-xl active:scale-95 transition-all">
               Go to Checkout
             </button>
-            <p className="text-[11px] text-center text-slate-500 font-bold uppercase tracking-widest leading-relaxed">
-              Safe & Secure Checkout. <br />We'll handle everything from here.
+            <p className="text-[11px] text-center text-zinc-500 font-bold uppercase tracking-widest leading-relaxed">
+              Encrypted checkout. You get tracking on every order.
             </p>
           </div>
         )}

@@ -1,6 +1,6 @@
 {
   "name": "PixelPunk Archive Pro",
-  "description": "Premium curated vintage archive powered by Cloudinary CDN with integrated AI Curator. Full cloud synchronization enabled via authenticated Firestore protocols.",
+  "description": "Vintage fashion archive with hand-checked pieces, Cloudinary media, and an AI Curator. Site content syncs through Firestore when online.",
   "requestFramePermissions": [
     "camera",
     "microphone"

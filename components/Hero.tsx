@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
       >
         <div className="max-w-5xl mx-auto text-center">
           <motion.div variants={itemVariants} className="mb-10">
-            <span className="font-serif italic text-2xl text-accent tracking-wide drop-shadow-sm">
+            <span className="font-serif text-2xl text-accent tracking-wide drop-shadow-sm">
               {content.hero.slogan}
             </span>
           </motion.div>
@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
             className="text-[12vw] md:text-[8rem] lg:text-[10rem] font-serif font-medium tracking-tight leading-[0.82] mb-14 text-white"
           >
             {content.hero.title.split('.')[0]}. <br />
-            <span className="italic font-normal text-zinc-500 serif-italic">{content.hero.title.split('.')[1] || "Modern Fits."}</span>
+            <span className="font-medium text-zinc-500">{content.hero.title.split('.')[1] || "Modern Fits."}</span>
           </motion.h1>
 
           <motion.p

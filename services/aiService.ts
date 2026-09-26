@@ -1,7 +1,16 @@
 
 import { GoogleGenAI, Modality, Type } from "@google/genai";
 
-const getAI = () => new GoogleGenAI({ apiKey: process.env.API_KEY });
+const getAI = () => {
+  const apiKey =
+    (import.meta as any).env?.VITE_GEMINI_API_KEY ||
+    (import.meta as any).env?.VITE_API_KEY ||
+    process.env.API_KEY;
+  if (!apiKey) {
+    throw new Error('Gemini API key is not configured. Set VITE_GEMINI_API_KEY.');
+  }
+  return new GoogleGenAI({ apiKey });
+};
 
 export const analyzeVintageItem = async (base64Image: string, mimeType: string) => {
   const ai = getAI();
@@ -32,8 +41,11 @@ export const generateArchiveConcept = async (prompt: string) => {
     }
   });
   
-  const base64 = response.generatedImages[0].image.imageBytes;
-  return `data:image/jpeg;base64,${base64}`;
+  const generated = response.generatedImages?.[0]?.image?.imageBytes;
+  if (!generated) {
+    throw new Error('Image generation returned no result.');
+  }
+  return `data:image/jpeg;base64,${generated}`;
 };
 
 export const startCuratorSession = (callbacks: any) => {

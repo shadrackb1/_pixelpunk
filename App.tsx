@@ -1,6 +1,6 @@
 
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState, useCallback, lazy, Suspense } from 'react';
+import { motion, useScroll, useSpring, AnimatePresence, MotionConfig } from 'framer-motion';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Vault from './components/Vault';
@@ -14,10 +14,11 @@ import LoginModal from './components/LoginModal';
 import ProductModal from './components/ProductModal';
 import PolicyModal from './components/PolicyModal';
 import AdminPanel from './components/AdminPanel';
-import AICurator from './components/AICurator'; // Imported AICurator
 import { Product } from './types';
 import { POLICY_CONTENT } from './constants';
 import { CMSProvider, useCMS } from './context/CMSContext';
+
+const AICurator = lazy(() => import('./components/AICurator'));
 
 const AppContent: React.FC = () => {
   const { content } = useCMS();
@@ -148,7 +149,9 @@ const AppContent: React.FC = () => {
       <AdminPanel />
       
       {/* AI Curator Component */}
-      <AICurator />
+      <Suspense fallback={null}>
+        <AICurator />
+      </Suspense>
 
       <AnimatePresence>
         {fomoNotice && (
@@ -204,9 +207,11 @@ const AppContent: React.FC = () => {
 };
 
 const App: React.FC = () => (
-  <CMSProvider>
-    <AppContent />
-  </CMSProvider>
+  <MotionConfig reducedMotion="user">
+    <CMSProvider>
+      <AppContent />
+    </CMSProvider>
+  </MotionConfig>
 );
 
 export default App;

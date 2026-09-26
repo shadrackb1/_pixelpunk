@@ -22,7 +22,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
         initial={{ opacity: 0, scale: 0.9, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-        className="relative w-full max-w-lg glass-card rounded-[4rem] p-10 md:p-14 shadow-2xl overflow-hidden"
+        className="relative w-full max-w-lg vintage-card rounded-[4rem] p-10 md:p-14 shadow-2xl overflow-hidden"
       >
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2"></div>
@@ -33,7 +33,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
           </div>
           <div className="space-y-3">
             <h3 className="text-4xl font-extrabold tracking-tight">
-              {isRegister ? 'Join Us!' : 'Welcome Back'}
+              {isRegister ? 'Create Account' : 'Welcome Back'}
             </h3>
             <p className="text-slate-400 font-medium text-base">
               {isRegister ? 'Create your free account to start shopping' : 'Log in to your account to see your saved items'}
@@ -57,8 +57,8 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
             <input type="password" placeholder="Create a password" className="w-full bg-slate-900 border border-white/5 p-5 rounded-2xl text-white placeholder-slate-700 focus:border-primary focus:outline-none transition-all font-bold" />
           </div>
 
-          <button className="w-full btn-primary py-6 rounded-3xl font-bold text-lg shadow-xl shadow-primary/20 mt-4 active:scale-95 transition-all">
-            {isRegister ? 'Create My Account' : 'Log In'}
+          <button className="w-full btn-vintage py-6 rounded-full font-bold text-lg shadow-xl mt-4 active:scale-95 transition-all">
+            {isRegister ? 'Create Account' : 'Log In'}
           </button>
         </form>
 

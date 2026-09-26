@@ -20,10 +20,21 @@ const AICurator: React.FC = () => {
 
   const stopLive = useCallback(() => {
     if (sessionRef.current) {
+      try {
+        const session = sessionRef.current;
+        Promise.resolve(session).then((s: any) => {
+          if (s && typeof s.close === 'function') s.close();
+        }).catch(() => {});
+      } catch {
+        /* session already closed */
+      }
+      sessionRef.current = null;
       setIsLiveActive(false);
       setMode('home');
     }
-    sourcesRef.current.forEach(s => s.stop());
+    sourcesRef.current.forEach((s: AudioBufferSourceNode) => {
+      try { s.stop(); } catch { /* already stopped */ }
+    });
     sourcesRef.current.clear();
   }, []);
 
@@ -106,10 +117,10 @@ const AICurator: React.FC = () => {
       const base64 = base64Data.split(',')[1];
       try {
         const analysis = await analyzeVintageItem(base64, file.type);
-        setResult(analysis);
+        setResult(analysis ?? "No analysis returned. Try a clearer image.");
       } catch (err) {
         console.error(err);
-        setResult("Analysis failed. Please try again with a clearer image.");
+        setResult("Could not read that image. Try a clearer photo of the garment.");
       } finally {
         setIsProcessing(false);
       }
@@ -128,6 +139,7 @@ const AICurator: React.FC = () => {
       setConceptImage(img);
     } catch (err) {
       console.error(err);
+      setResult("Image generation is unavailable right now. Check the API key and try again.");
     } finally {
       setIsProcessing(false);
     }
@@ -177,7 +189,7 @@ const AICurator: React.FC = () => {
                     <div>
                       <h3 className="text-2xl font-serif italic text-white leading-tight">The Curator</h3>
                       <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">
-                        {isLiveActive ? 'Live Consultation Active' : 'Archive Intelligence Engine'}
+                        {isLiveActive ? 'Live Consultation Active' : 'Archive Expert on Call'}
                       </p>
                     </div>
                   </div>
@@ -246,7 +258,7 @@ const AICurator: React.FC = () => {
                           <input name="prompt" required placeholder="e.g. A 1950s naval jacket with digital glitch patterns..." className="w-full bg-zinc-800/50 border border-white/5 p-6 rounded-2xl text-white placeholder-zinc-600 focus:border-primary transition-all outline-none shadow-inner" />
                         </div>
                         <button disabled={isProcessing} className="w-full btn-vintage py-6 rounded-full uppercase font-bold tracking-widest text-sm disabled:opacity-50 active:scale-95 transition-all shadow-xl">
-                          {isProcessing ? 'Visualizing Architecture...' : 'Synthesize Concept'}
+                          {isProcessing ? 'Building the image...' : 'Generate Image'}
                         </button>
                       </form>
                       <AnimatePresence>
@@ -294,8 +306,8 @@ const AICurator: React.FC = () => {
 
                          {isProcessing && (
                             <div className="text-center space-y-3">
-                              <div className="text-primary font-bold uppercase tracking-[0.4em] text-[10px] animate-pulse">Running Historical Regression...</div>
-                              <p className="text-zinc-500 text-xs italic">Analyzing construction markers and label patterns</p>
+                              <div className="text-primary font-bold uppercase tracking-[0.4em] text-[10px] animate-pulse">Reading the piece...</div>
+                              <p className="text-zinc-500 text-xs italic">Checking construction markers and label patterns</p>
                             </div>
                          )}
 

@@ -18,7 +18,7 @@ export const db = getFirestore(app);
 export const auth = getAuth(app);
 
 // Safe analytics initialization
-export let analytics = null;
+export let analytics: ReturnType<typeof getAnalytics> | null = null;
 isSupported().then((supported) => {
   if (supported) {
     analytics = getAnalytics(app);
